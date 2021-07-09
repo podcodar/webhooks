@@ -2,6 +2,8 @@
 
   This project implements a basic example of a deno deploy API, using oak lib.
 
+  deployed at:[[https://base-deno-deploy.deno.dev/][https://base-deno-deploy.deno.dev/]] 
+
 ** development
 
    This projects depends on:
@@ -23,6 +25,10 @@
    You can call the dummy endpoints:
    - ~http://localhost:8080/forums/1/posts~
    - ~http://localhost:8080/forums/1/posts/1~
+
+   or you can test the deployed version:
+   - ~https://base-deno-deploy.deno.dev/forums/1/posts~
+   - ~https://base-deno-deploy.deno.dev/forums/1/posts/1~
 
 ** notes
    - deno deploy doesn't support ~import_map.json~
