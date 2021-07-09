@@ -1,0 +1,6 @@
+scripts:
+  start:
+    desc: Start server
+    cmd: deployctl run --watch --unstable --libs="" --no-check ./src/server.ts
+    imap: import_map.json
+    unstable: true
