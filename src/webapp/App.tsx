@@ -1,4 +1,4 @@
-import React from "https://x.lcas.dev/preact@10.5.12/mod.js";
+import React, { h } from "https://x.lcas.dev/preact@10.5.12/mod.js";
 
 function App() {
   return (
