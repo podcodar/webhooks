@@ -15,6 +15,7 @@ const forums = new Router().use("/forums/:forumId/posts", posts.routes(), posts.
 
 const root = new Router().get("/", (ctx) => {
   ctx.response.body = renderToString(<App />);
+  ctx.response.headers.set("Content-Type", "text/html");
 });
 
 export const routes: readonly Router[] = [forums, root];
