@@ -1,0 +1,30 @@
+* Base deno deploy project
+
+  This project implements a basic example of a deno deploy API, using oak lib.
+
+** development
+
+   This projects depends on:
+   - [[https://deno.land/][Deno]]
+   - [[https://velociraptor.run/][Velociraptor]]
+   - [[https://deno.com/deploy/docs/deployctl][deployctl]]
+
+   After installing these dependendencies, just run:
+
+   #+begin_src shell
+     vr start
+     # Listening on http://0.0.0.0:8080
+   #+end_src
+
+   This should start locally the server at port ~8080~.
+
+** usage
+
+   You can call the dummy endpoints:
+   - ~http://localhost:8080/forums/1/posts~
+   - ~http://localhost:8080/forums/1/posts/1~
+
+** notes
+   - deno deploy doesn't support ~import_map.json~
+   - deno deploy breaks with type checking, so I had to disable it
+
