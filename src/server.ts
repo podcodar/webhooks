@@ -1,7 +1,7 @@
 /// <reference path="./types/deploy.d.ts" />
 
 import { Application } from "https://deno.land/x/oak@v7.7.0/mod.ts";
-import { routes } from "./routes.ts";
+import { routes } from "./routes.tsx";
 
 function run() {
   const app = new Application();
