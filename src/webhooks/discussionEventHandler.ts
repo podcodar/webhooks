@@ -23,7 +23,12 @@ function discussionEventHandler({ action, discussion }: GithubDiscussionsEvent) 
   switch (action) {
     case "created":
       return sendMessage(`
-        **Nova discussão criada**: ${discussion.title}
+        **Nova discussão criada**: *${discussion.category.name} - ${discussion.title}*
+        > ${discussion.html_url}
+      `);
+    case "edited":
+      return sendMessage(`
+        **Discussão editada**: *${discussion.category.name} - ${discussion.title}*
         > ${discussion.html_url}
       `);
   }
