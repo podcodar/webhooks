@@ -1,8 +1,8 @@
 * Base deno deploy project
 
-  This project implements a basic example of a deno deploy API, using oak lib.
+  This project implements our discord webhooks
 
-  deployed at:[[https://base-deno-deploy.deno.dev/][https://base-deno-deploy.deno.dev/]] 
+  deployed at:[[https://podcodar-webhooks.deno.dev/][https://podcodar-webhooks.deno.dev/]]
 
 ** development
 
@@ -23,14 +23,4 @@
 ** usage
 
    You can call the dummy endpoints:
-   - ~http://localhost:8080/forums/1/posts~
-   - ~http://localhost:8080/forums/1/posts/1~
-
-   or you can test the deployed version:
-   - ~https://base-deno-deploy.deno.dev/forums/1/posts~
-   - ~https://base-deno-deploy.deno.dev/forums/1/posts/1~
-
-** notes
-   - deno deploy doesn't support ~import_map.json~
-   - deno deploy breaks with type checking, so I had to disable it
-
+   - ~POST http://localhost:8080/webhooks/github-discussions~
