@@ -1,4 +1,4 @@
-* Base deno deploy project
+* PodCodar webhooks
 
   This project implements our discord webhooks
 
