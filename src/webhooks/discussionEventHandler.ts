@@ -20,17 +20,16 @@ export function sendMessage(text: string, channelID = 864139195899445298n) {
 }
 
 function discussionEventHandler({ action, discussion }: GithubDiscussionsEvent) {
+  const messageTemplate = (prefix: string) => `
+    *${prefix}: ${discussion.category.name}* - **${discussion.title}**
+    > ${discussion.html_url}
+  `;
+
   switch (action) {
     case "created":
-      return sendMessage(`
-        **Nova discussão criada**: *${discussion.category.name} - ${discussion.title}*
-        > ${discussion.html_url}
-      `);
+      return messageTemplate("Nova discussão criada");
     case "edited":
-      return sendMessage(`
-        **Discussão editada**: *${discussion.category.name} - ${discussion.title}*
-        > ${discussion.html_url}
-      `);
+      return messageTemplate("Discussão editada");
   }
 }
 
