@@ -1,7 +1,7 @@
 // Interface details here: https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#discussion
 // deno-lint-ignore-file
 
-export interface GithubDiscussions {
+export interface GithubDiscussionsEvent {
   readonly action: GithubDiscussionsActions;
   readonly discussion: {
     readonly id: string;

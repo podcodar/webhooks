@@ -2,9 +2,12 @@
 
 import { Application } from "https://deno.land/x/oak@v7.7.0/mod.ts";
 import { routes } from "./routes.tsx";
+import { startDiscordBot } from "./webhooks/startDiscordBot.ts";
 
-function run() {
+async function run() {
   const app = new Application();
+  // Start discord bot
+  await startDiscordBot();
 
   // Apply routes
   for (const route of routes) {
@@ -15,4 +18,4 @@ function run() {
   addEventListener("fetch", app.fetchEventHandler());
 }
 
-run();
+await run();
