@@ -23,4 +23,4 @@
 ** usage
 
    You can call the dummy endpoints:
-   - ~POST http://localhost:8080/webhooks/github-discussions~
+   - ~POST http://localhost:8080/github-discussions~
