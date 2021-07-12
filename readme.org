@@ -2,7 +2,7 @@
 
   This project implements our discord webhooks
 
-  deployed at:[[https://podcodar-webhooks.deno.dev/][https://podcodar-webhooks.deno.dev/]]
+  deployed at: [[https://podcodar-webhooks.deno.dev/][https://podcodar-webhooks.deno.dev/]]
 
 ** development
 
