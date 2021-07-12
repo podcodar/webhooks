@@ -4,9 +4,10 @@ import { Router } from "https://deno.land/x/oak@v7.7.0/mod.ts";
 import App from "./webapp/App.tsx";
 
 const webhooks = new Router()
-  .post("/github-discussions", (ctx) => {
+  .post("/github-discussions", async (ctx) => {
     ctx.response.headers.set("Content-Type", "text/html");
-    ctx.response.body = ctx.request.body({ type: 'json' });
+    const body = ctx.request.body({ type: 'json' })
+    ctx.response.body = await body.value;
   })
 
 const root = new Router().get("/", (ctx) => {
