@@ -22,7 +22,8 @@ export function sendMessage(text: string, channelID = 864139195899445298n) {
 
 function setupTasks() {
   // Add daily task
-  createTask(dailyMessageTask, [9, 17, 20]);
+  const parseToBrHours = (gmtHour: number) => gmtHour + 3;
+  createTask(dailyMessageTask, [9, 17, 20].map(parseToBrHours));
 }
 
 function createTask(taskCallback: () => void, runsAt: number[], interval = Time.HOUR) {
