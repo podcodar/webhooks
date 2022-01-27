@@ -26,11 +26,6 @@ export function sendMessage(text: string, channelID = 864139195899445298n) {
   Discord.sendMessage(channelID, text);
 }
 
-export async function getUserList(guildID = 864139195899445298n) {
-  const list = await Discord.getGuild(guildID);
-  return list;
-}
-
 async function setupCommands() {
   const command = await Discord.createSlashCommand({
     options: [],
