@@ -1,13 +1,14 @@
 /// <reference path="./types/deploy.d.ts" />
 
-import { Application } from "../deps.ts";
+import { Application, setup, virtualSheet } from "../deps.ts";
 import { router } from "./routes.tsx";
 import * as Discord from "./services/discord.ts";
 
 async function run() {
+  await bootstrapServer();
+
+  // Create server
   const app = new Application();
-  // Start discord bot
-  await Discord.startup();
 
   // Apply routes
   app.use(router.routes());
@@ -17,3 +18,10 @@ async function run() {
 }
 
 await run();
+
+async function bootstrapServer() {
+  // Start discord bot
+  await Discord.startup();
+  // Start twind server
+  setup({ sheet: virtualSheet });
+}

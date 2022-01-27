@@ -1,8 +1,9 @@
-import { Router, ssr, React, h } from "../deps.ts";
+import { Router, React, h, renderToString } from "../deps.ts";
 
 import { GithubDiscussionsEvent } from "./interfaces/github-discussions.ts";
 import discussionEventHandler from "./webhooks/discussionEventHandler.ts";
 import { dailyCallbackHandler } from "./webhooks/dailyCallbackHandler.ts";
+
 import App from "./webapp/App.tsx";
 
 export const router = new Router()
@@ -14,8 +15,6 @@ export const router = new Router()
     discussionEventHandler(discussionEvent)
   })
   .get("/", (ctx) => {
-    ctx.response.body = ssr(<App />).body;
+    ctx.response.body = renderToString(<App />);
     ctx.response.headers.set("Content-Type", "text/html");
   });
-
-
