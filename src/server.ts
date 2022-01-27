@@ -1,7 +1,7 @@
 /// <reference path="./types/deploy.d.ts" />
 
 import { Application } from "../deps.ts";
-import { routes } from "./routes.tsx";
+import { router } from "./routes.tsx";
 import * as Discord from "./services/discord.ts";
 
 async function run() {
@@ -10,9 +10,7 @@ async function run() {
   await Discord.startup();
 
   // Apply routes
-  for (const route of routes) {
-    app.use(route.routes());
-  }
+  app.use(router.routes());
 
   // listen fetches with oak server
   addEventListener("fetch", app.fetchEventHandler());
