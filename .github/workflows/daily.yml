@@ -2,7 +2,7 @@ name: Send daily notifications
 
 on:
   schedule:
-    - cron: "* 8,14,19 * * *
+    - cron: "* 8,14,19 * * *"
 
 jobs:
   refresh-feed:
