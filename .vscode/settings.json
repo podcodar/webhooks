@@ -2,12 +2,9 @@
   "deno.enable": true,
   "deno.lint": true,
   "deno.unstable": true,
-  "deno.import_intellisense_origins": {
-    "https://deno.land": true,
-    "https://deno.land/x": true
-  },
   "deno.importMap": "./import_map.json",
   "deno.suggest.imports.hosts": {
-    "https://deno.land": true
+    "https://deno.land": true,
+    "https://deno.land/x": true
   }
 }
