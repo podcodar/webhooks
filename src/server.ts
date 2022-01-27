@@ -1,6 +1,6 @@
 /// <reference path="./types/deploy.d.ts" />
 
-import { Application } from "https://deno.land/x/oak@v7.7.0/mod.ts";
+import { Application } from "../deps.ts";
 import { routes } from "./routes.tsx";
 import * as Discord from "./services/discord.ts";
 

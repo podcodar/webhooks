@@ -1,6 +1,4 @@
-import React, { h } from "https://x.lcas.dev/preact@10.5.12/mod.js";
-import { renderToString } from "https://x.lcas.dev/preact@10.5.12/ssr.js";
-import { Router } from "https://deno.land/x/oak@v7.7.0/mod.ts";
+import { Router, renderToString, React, h } from "../deps.ts";
 import App from "./webapp/App.tsx";
 import { GithubDiscussionsEvent } from "./interfaces/github-discussions.ts";
 import discussionEventHandler from "./webhooks/discussionEventHandler.ts";
