@@ -1,0 +1,12 @@
+name: Send daily notifications
+
+on:
+  schedule:
+    - cron: "* 8,14,19 * * *
+
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call daily callback
+        run: curl --request POST --url "https://podcodar-webhooks.deno.dev/daily-callback"
