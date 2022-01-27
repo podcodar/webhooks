@@ -26,12 +26,4 @@ export function sendMessage(text: string, channelID = 864139195899445298n) {
   Discord.sendMessage(channelID, text);
 }
 
-async function setupCommands() {
-  const command = await Discord.createSlashCommand({
-    options: [],
-    name: "hello",
-    description: "say hello from bot",
-  });
-
-  await Discord.createSlashCommand(command);
-}
+async function setupCommands() {}
