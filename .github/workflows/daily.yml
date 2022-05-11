@@ -6,8 +6,8 @@ on:
     - cron: "0 11,17,20 * * MON-FRI"
 
 jobs:
-  daily-job:
+  refresh-feed:
     runs-on: ubuntu-latest
     steps:
       - name: Call daily callback
-        run: echo 'deprecated'
+        run: curl --request POST --url "https://podcodar-webhooks.deno.dev/daily-callback"
